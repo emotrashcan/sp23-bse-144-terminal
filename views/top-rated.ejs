@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Rated Attractions</title>
+</head>
+<body>
+    <h1>Top 5 Highest Rated Attractions</h1>
+
+    <ul>
+        <% attractions.forEach(attraction => { %>
+            <li>
+                <h2><%= attraction.name %></h2>
+                <p>Location: <%= attraction.location %></p>
+                <p>Entry Fee: $<%= attraction.entryFee %></p>
+                <p>Rating: <%= attraction.Rating %></p>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
