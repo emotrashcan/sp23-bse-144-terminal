@@ -12,7 +12,7 @@ const AttractionSchema = new mongoose.Schema({
     entryFee: {
         type:Number,
         required: [true],
-        min: 1,
+        min: [1, 'Entry fee cannot be negative'],
     },
     Rating: {
         type:Number,
@@ -20,4 +20,7 @@ const AttractionSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('User', userSchema);
+
+
+const Attraction = mongoose.model('User', AttractionSchema);
+module.exports = Attraction;
